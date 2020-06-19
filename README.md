@@ -93,7 +93,11 @@
 ## Refactor the routes 
 - Basically make our app.js simple and smaller so that its easy to understand
 
-## Users+ comment
+## Link User and Comments
 - Associate users and comment
 - Save author's name to a comment automatically
+
+## Link Users and campground
+- Prevent the unauthorised user from creating a campground
+- Save username + id to newly created campground
 
