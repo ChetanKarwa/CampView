@@ -5,6 +5,7 @@ var express             = require("express"),
     passport            = require("passport"),
     LocalStrategy       = require("passport-local"),
     Campground          = require("./models/campground"),
+    methodOverride      = require("method-override"),
     Comment             = require("./models/comment"),
     seedDB              = require("./seeds"),
     User                = require("./models/user"),
@@ -12,7 +13,7 @@ var express             = require("express"),
     campgroundRoutes    = require("./routes/campgrounds"),
     indexRoutes         = require("./routes/index");
 
-seedDB();
+// seedDB();
 mongoose.connect("mongodb://localhost/yelp_camp",{useNewUrlParser: true,useUnifiedTopology: true});
 app.use(bodyparser.urlencoded({extended: true}));
 app.set("view engine","ejs");
@@ -38,7 +39,8 @@ app.use(function(req,res,next){
     res.locals.currentUser = req.user;
     next();
 })
-
+//for update and destroy campgrounds
+app.use(methodOverride("_method"));
 // say our app to use those routes.......
 // to reduce the duplication as always campgrounds always come we reduce it from everywhere
 app.use("/campgrounds",campgroundRoutes);
