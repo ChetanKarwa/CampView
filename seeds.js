@@ -30,34 +30,34 @@ function seedDB(){
     // })
     // Remove all campgrounds
     Campground.remove({},function(err){
-        if(err){
-            console.log(err)
-        }else{
-            console.log("Removed Campgrounds");
-        }
-        data.forEach(function(seed){
-            Campground.create(seed,function(err,campground){
-                if(err){
-                    console.log(err)
-                }else{
-                    console.log("added a campground");
-                    Comment.create(
-                        {
-                            text: "This place is great",
-                            author: "Homer"
-                        },function(err,comment){
-                            if(err){
-                                console.log(err)
-                            }
-                            else{
-                                campground.comments.push(comment);
-                                campground.save();
-                                console.log("comment added");
-                            }
-                        });
-                      }
-                })
-            })
+        // if(err){
+        //     console.log(err)
+        // }else{
+        //     console.log("Removed Campgrounds");
+        // }
+        // data.forEach(function(seed){
+        //     Campground.create(seed,function(err,campground){
+        //         if(err){
+        //             console.log(err)
+        //         }else{
+        //             console.log("added a campground");
+        //             Comment.create(
+        //                 {
+        //                     text: "This place is great",
+        //                     author: "Homer"
+        //                 },function(err,comment){
+        //                     if(err){
+        //                         console.log(err)
+        //                     }
+        //                     else{
+        //                         campground.comments.push(comment);
+        //                         campground.save();
+        //                         console.log("comment added");
+        //                     }
+        //                 });
+        //               }
+        //         })
+        //     })
         });
 }   
     //add a few campground
