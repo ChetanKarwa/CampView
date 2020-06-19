@@ -10,7 +10,8 @@ seedDB();
 mongoose.connect("mongodb://localhost/yelp_camp",{useNewUrlParser: true,useUnifiedTopology: true});
 app.use(bodyparser.urlencoded({extended: true}));
 app.set("view engine","ejs");
-
+// dir name refers to the directry we are presently in........
+app.use(express.static(__dirname+ "/public"));
 
 app.get("/",function(req,res){
     res.render("landing");

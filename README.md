@@ -65,5 +65,9 @@
 - Add the comment new and create route
 - Add the new comment form
 
+## Style show page
+- Add sidebar to show page
+- Display comment nicely
+
 
 
