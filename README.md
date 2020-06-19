@@ -40,24 +40,30 @@
 
 ### Show Page
 
-* Review a restful route we have seen so far
-* Add description to our campground model
-* Show db.collection.drop()
-* Add a show rooute/template
+- Review a restful route we have seen so far
+- Add description to our campground model
+- Show db.collection.drop()
+- Add a show rooute/template
 
 ## Refactor mongoose code
 
-* Create a models directry
-* Use module exports
-* Require everything correctly
+- Create a models directry
+- Use module exports
+- Require everything correctly
 
 ### Add Seeds File
 
-* Add a seeds.js file
-* Run the seeds file every time the server starts
+- Add a seeds.js file
+- Run the seeds file every time the server starts
 
 ### Add a comment model!
+- Make our errors go away
+- Display comments on the campground page
 
-* Make our errors go away
-* Display comments on the campground page
+## Create New/Create
+- Discuss nested route
+- Add the comment new and create route
+- Add the new comment form
+
+
 
